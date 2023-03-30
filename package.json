@@ -1,0 +1,32 @@
+{
+  "name": "youtubeapi--unittesting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramakrishna-bolisetty/Youtube-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramakrishna-bolisetty/Youtube-API/issues"
+  },
+  "homepage": "https://github.com/ramakrishna-bolisetty/Youtube-API#readme",
+  "devDependencies": {
+    "jasmine-core": "^4.5.0",
+    "karma": "^6.4.1",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-jasmine": "^5.1.0"
+  },
+  "dependencies": {
+    "karma-coverage": "^2.2.0"
+  }
+}
