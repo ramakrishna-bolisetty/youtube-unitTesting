@@ -1,4 +1,4 @@
-describe("To test fetch data from youtube API", function () {
+describe('To test fetch data from youtube API', ()=> {
     let data;
     beforeAll(async function () {
         data = await fetchData('Javascript');
@@ -7,17 +7,16 @@ describe("To test fetch data from youtube API", function () {
     it('Type checking that data is JSON object or not', () => {
 
         expect(typeof data).toEqual(typeof {});
-    })
+    });
 
     it("fetch Data from API using search text", () => {
         expect(data.items[0].kind).toEqual("youtube#searchResult");
         expect(data.items[1].id.kind).toEqual("youtube#video");
         expect(data.items[2].id.kind).toEqual("youtube#video");
 
-    })
+    });
 
-
-})
+});
 
 describe('To test displayvideos and pagination', () => {
     let data, pageDiv;
@@ -26,12 +25,9 @@ describe('To test displayvideos and pagination', () => {
         pageDiv = document.createElement("div");
         pageDiv.setAttribute('id', 'pageDiv');
 
-    })
+    });
 
     it(' testing for request data method', async () => {
-        // spyOn(window, 'createButton');
-        // applyPagination(data, pageDiv);
-        // expect(createButton).toHaveBeenCalled();
         spyOn(window, 'fetchData');
         spyOn(window, 'displayVideos');
         RequestData('javascript');
@@ -39,7 +35,7 @@ describe('To test displayvideos and pagination', () => {
         expect(fetchData).toHaveBeenCalled();
         expect(displayVideos).toHaveBeenCalled();
 
-    })
+    });
 
 
     it(' display video testing ', async () => {
@@ -48,12 +44,13 @@ describe('To test displayvideos and pagination', () => {
         await Promise.resolve();
         expect(applyPagination).toHaveBeenCalled();
 
-    })
+    });
 
-    it('applyparigantion test', () => {
+    it(' applyparigantion test', () => {
         spyOn(window, 'createButton');
         applyPagination(data, pageDiv);
         expect(createButton).toHaveBeenCalled();
-    })
-})
+    });
+});
+
 
